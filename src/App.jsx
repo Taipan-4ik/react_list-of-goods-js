@@ -21,7 +21,7 @@ export const App = () => {
   const [activeSort, setActiveSort] = useState(null);
 
   const sortAlphabetically = () => {
-    const sortedGoods = [...goods].sort((good1, good2) => {
+    const sortedGoods = [...goodsFromServer].sort((good1, good2) => {
       return good1.localeCompare(good2);
     });
 
@@ -30,7 +30,7 @@ export const App = () => {
   };
 
   const sortByLength = () => {
-    const sortedGoods = [...goods].sort(
+    const sortedGoods = [...goodsFromServer].sort(
       (good1, good2) => good1.length - good2.length,
     );
 
